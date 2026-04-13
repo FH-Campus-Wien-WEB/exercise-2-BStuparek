@@ -1,2 +1,47 @@
 /* Task 1.1. Add your movie data here 
    and export it so it's available in server.js */
+  const movies = {
+         tt0120737: {
+              "imdbID":"tt0120737",
+              "Title":"The Lord of the Rings: The Fellowship of the Ring",
+              "Released":"2001-12-19",
+              "Runtime":"178",
+              "Genres":["Adventure","Drama","Fantasy"],
+              "Directors":["Peter Jackson"],
+              "Writers":["J.R.R Tolkien","Fran Walsh","Philippa Boyens"],
+              "Actors":["Elijah Wood","Ian Mckellen","Orlando Bloom"],
+              "Plot":"A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron",
+              "Poster":"https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_SX300.jpg",
+              "Metascore":92,
+              "imdbRating":8.9,
+          },
+         tt0144084: {
+              "imdbID":"tt0144084",
+              "Title":"American Psycho",
+              "Released":"2000-4-14",
+              "Runtime":"102",
+              "Genres":["Crime","Drama","Horror"],
+              "Directors":["Mary Harron"],
+              "Writers":["Bret Easton Ellis","Mary Harron","Guinevere Turner"],
+              "Actors":["Christian Bale","Justin Theroux","Josh Lucas"],
+              "Plot":"A wealthy New York City investment banking executive, Patrick Bateman, hides his alternate psychopathic ego from his co-workers and friends as he delves deeper into his violent, hedonistic fantasies",
+              "Poster":"https://m.media-amazon.com/images/M/MV5BNzBjM2I5ZjUtNmIzNy00OGNkLWIwZDMtOTAwYWUwMzA2YjdlXkEyXkFqcGc@._V1_SX300.jpg",
+              "Metascore":64,
+              "imdbRating":7.6,
+          },
+          tt0099685: {
+              "imdbID":"tt0099685",
+              "Title":"Goodfellas",
+              "Released":"1990-09-21",
+              "Runtime":"145",
+              "Genres":["Biography","Crime","Drama"],
+              "Directors":["Martin Scorsese"],
+              "Writers":["Nicholas Pileggi","Martin Scorsese"],
+              "Actors":["Robert De Niro","Ray Liotta","Joe Pesci",],
+              "Plot":"The story of Henry Hill and his life in the mafia, covering his relationship with his wife Karen and his mob partners Jimmy Conway and Tommy DeVito",
+              "Poster":"https://m.media-amazon.com/images/M/MV5BN2E5NzI2ZGMtY2VjNi00YTRjLWI1MDUtZGY5OWU1MWJjZjRjXkEyXkFqcGc@._V1_SX300.jpg",
+              "Metascore":92,
+              "imdbRating":8.7,
+          
+          }}
+module.exports = movies;

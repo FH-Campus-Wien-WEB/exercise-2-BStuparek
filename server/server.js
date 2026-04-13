@@ -15,20 +15,40 @@ app.use(express.static(path.join(__dirname, 'files')));
 app.get('/movies', function (req, res) {
   /* Task 1.2. Remove the line below and eturn the movies from 
      the model as an array */
-  res.sendStatus(404)
+  res.send(Object.values(movieModel))
+  res.sendStatus(200)
 })
 
 // Configure a 'get' endpoint for a specific movie
 app.get('/movies/:imdbID', function (req, res) {
   /* Task 2.1. Remove the line below and add the 
     functionality here */
-  res.sendStatus(404)
+    const movie = movieModel[req.params.imdbID];
+  if(movie){
+    res.send(movie)
+    res.sendStatus(200)
+  }
+  else{
+    res.sendStatus(404)
+  }
 })
 
 /* Task 3.1 and 3.2.
    - Add a new PUT endpoint
    - Check whether the movie sent by the client already exists 
      and continue as described in the assignment */
+app.put('/movies/:imdbID', function (req,res){
+  const movie = movieModel[req.params.imdbID];
+  const id = req.params.imdbID;
+  if(movie){
+    Object.assign(movie, req.body)
+    res.sendStatus(200)
+  }
+  if(!movie){
+    movieModel[id] = req.body;
+    res.sendStatus(201)
+  }
+})
 
 app.listen(3000)
 

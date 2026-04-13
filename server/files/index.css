@@ -1,41 +1,29 @@
-@import url(base.css);
-
-h1 {
-  font-size: 200%;
-  margin: 8px 0px;
-}
-
-img {
-  border-radius: 12px;
-}
-
-article {
-  background-color: lightgray;
-  border-radius: 16px;
-  padding: 16px;
-  margin: 2vw;
-}
-
-span {
-  margin-right: 4px;
-}
-
-.genre {
-  padding: 4px 8px;
-  border: solid black 1px;
-  border-radius: 6px;
-  background-color: darkgray;
-  font-weight: bold;
-}
-
-input {
-  width: 100%;
-}
-
-select {
-  width: 100%;
-}
-
-textarea {
-  width: 100%;
-}
+        @import url(base.css);
+        body{
+            font-family:'Trebuchet MS', sans-serif, monospace;
+        }
+        img{
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        h1{
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        article{
+            background-color: #f5f5f5e7;
+            border-radius: 12px;
+            margin: 30px;
+            margin-bottom: 30px;
+            padding: 20px;
+            box-shadow: 3px 3px;
+        }
+        span{
+            margin-right: 10 px;
+        }
+        .genre{
+            background-color: lightgray;
+            padding: 10px;
+            border-radius: 8px;
+            display: inline-block;
+        }
