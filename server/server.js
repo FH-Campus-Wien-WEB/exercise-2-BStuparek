@@ -50,6 +50,18 @@ app.put('/movies/:imdbID', function (req,res){
   }
 })
 
+app.post('/movies/:imdbID', function (req,res){
+  const movie = movieModel[req.params.imdbID];
+  const id = req.params.imdbID;
+  if(!movie){
+    movieModel[id] = req.body;
+    res.sendStatus(201)
+  }
+  else{
+    res.sendStatus(404)
+  }
+})
+
 app.listen(3000)
 
 console.log("Server now listening on http://localhost:3000/")
