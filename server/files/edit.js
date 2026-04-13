@@ -74,9 +74,14 @@ function putMovie() {
   xhr.setRequestHeader("Content-Type", "application/json")
   xhr.send(JSON.stringify(movie))
   xhr.onload = function () {
-    if (xhr.status == 200 || xhr.status === 201) {
+    if (xhr.status == 200 || xhr.status === 204) {
       alert("Changes saved successfully!")
       location.href = "index.html";
+    }
+    else if(xhr.status == 201){
+      alert("New Movie created successfully!")
+      location.href = "index.html"
+    
     } else {
       alert("Saving of movie data failed. Status code was " + xhr.status);
     }
